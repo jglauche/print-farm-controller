@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nick: MyString
+  uuid: MyString
+  print_material_id: 1
+  place: MyString
+
+two:
+  nick: MyString
+  uuid: MyString
+  print_material_id: 1
+  place: MyString

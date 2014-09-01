@@ -1,0 +1,22 @@
+== Print Farm Controller
+This is our internal application for controlling our print farm. 
+
+
+== License
+AGPL v3
+
+
+
+== Getting Started
+
+- create database.yml
+- check Gemfile for database adapter
+- run bundle install
+- run rake db:migrate
+- install a backend
+- start the background job: 
+    #RAILS_ENV="production" nohup bundle exec rake jobs:work &
+ 
+
+
+

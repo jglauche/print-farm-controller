@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  print_model_set_id: 1
+  print_model_id: 
+  quantity: 1
+  default_infill: 1.5
+  default_fill_pattern: MyString
+
+two:
+  print_model_set_id: 1
+  print_model_id: 
+  quantity: 1
+  default_infill: 1.5
+  default_fill_pattern: MyString

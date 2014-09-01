@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  default_infill: 1.5
+  default_fill_pattern: MyString
+
+two:
+  name: MyString
+  default_infill: 1.5
+  default_fill_pattern: MyString

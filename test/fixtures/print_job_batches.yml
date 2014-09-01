@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  print_model_set_id: 1
+  print_material_id: 1
+  machine_id: 1
+  container_id: 1
+  priority: 1
+
+two:
+  print_model_set_id: 1
+  print_material_id: 1
+  machine_id: 1
+  container_id: 1
+  priority: 1

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  material_id: 1
+  filament_weight: 1.5
+  filament_left: 1.5
+
+two:
+  material_id: 1
+  filament_weight: 1.5
+  filament_left: 1.5

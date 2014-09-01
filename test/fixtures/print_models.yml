@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  filename: MyString
+  md5sum: MyString
+  max_x: 1
+  max_y: 1
+  default_infill: 1.5
+  default_layer_height: 1.5
+  weight: 1.5
+  printing_time: 2011-07-24 18:12:47
+  print_more_than_needed_if_possible: 1
+
+two:
+  filename: MyString
+  md5sum: MyString
+  max_x: 1
+  max_y: 1
+  default_infill: 1.5
+  default_layer_height: 1.5
+  weight: 1.5
+  printing_time: 2011-07-24 18:12:47
+  print_more_than_needed_if_possible: 1
