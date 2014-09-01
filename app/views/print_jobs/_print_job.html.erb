@@ -1,0 +1,12 @@
+  <tr>
+    <td><%= print_job.print_model.filename %></td>
+    <td><%= print_job.quantity_done %> / <%= print_job.quantity %></td>
+    <td><%= print_job.quantity_printing %></td>
+    <td><%= print_job.quantity_failed %></td>
+    <td><%= print_job.try(:material).try(:name) %><%= print_job.plastic_type %></td>
+    <td><%= print_job.priority %></td>
+    <td></td>
+    <td><%= link_to 'Show', print_job %></td>
+    <td><%= link_to 'Edit', edit_print_job_path(print_job) %></td>
+    <td><%= link_to 'Destroy', print_job, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>

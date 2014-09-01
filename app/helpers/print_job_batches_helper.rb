@@ -1,0 +1,2 @@
+module PrintJobBatchesHelper
+end

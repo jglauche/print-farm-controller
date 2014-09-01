@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+    <b>ID:</b> <%= @print_material.id %>
+</p>
+
+<p>
+  <b>Material:</b>
+  <%= @print_material.material.name %>
+</p>
+
+<p>
+  <b>Filament weight:</b>
+  <%= @print_material.filament_weight %>
+</p>
+
+<p>
+  <b>Filament left:</b>
+  <%= @print_material.filament_left %>
+</p>
+
+
+<%= link_to 'Edit', edit_print_material_path(@print_material) %> |
+<%= link_to 'Back', print_materials_path %>

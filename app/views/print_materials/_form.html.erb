@@ -1,0 +1,34 @@
+<%= form_for(@print_material) do |f| %>
+  <% if @print_material.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@print_material.errors.count, "error") %> prohibited this print_material from being saved:</h2>
+
+      <ul>
+      <% @print_material.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :material_id %><br />
+    <%= f.select :material_id, Material.all.map{|l| [l.name, l.id]} %>
+  </div>
+  <div class="field">
+    <%= f.label :filament_weight %><br />
+    <%= f.text_field :filament_weight %>
+  </div>
+  <div class="field">
+    <%= f.label :filament_left %><br />
+    <%= f.text_field :filament_left %>
+  </div>
+  <div class="field">
+    <%= f.label :current_diameter %><br />
+    <%= f.text_field :current_diameter %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

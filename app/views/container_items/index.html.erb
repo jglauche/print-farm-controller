@@ -1,0 +1,33 @@
+<h1>Listing container_items</h1>
+
+<table>
+  <tr>
+    <th>Container</th>
+    <th>Print model</th>
+    <th>Quantity</th>
+    <th>Material</th>
+    <th>Print material</th>
+    <th>Machine</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @container_items.each do |container_item| %>
+  <tr>
+    <td><%= container_item.container_id %></td>
+    <td><%= container_item.print_model_id %></td>
+    <td><%= container_item.quantity %></td>
+    <td><%= container_item.material_id %></td>
+    <td><%= container_item.print_material_id %></td>
+    <td><%= container_item.machine_id %></td>
+    <td><%= link_to 'Show', container_item %></td>
+    <td><%= link_to 'Edit', edit_container_item_path(container_item) %></td>
+    <td><%= link_to 'Destroy', container_item, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Container item', new_container_item_path %>

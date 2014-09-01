@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Neue Datei hochladen</h3>
+
+<%= form_tag :upload_archive, :multipart => true %>
+  <%= file_field :upload_archive, :stl_file %>
+  <%= submit_tag "Upload" %>
+</form>
+
+<h3>Dateien in dem Archiv</h3>
+<table>
+
+<%= render(:partial => "print_models/table_head") %>
+<%= render(@archive.print_models) %> 
+</table>
+<%= link_to 'Edit', edit_archive_path(@archive) %> |
+<%= link_to 'Back', archives_path %>
+
+

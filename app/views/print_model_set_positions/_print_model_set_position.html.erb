@@ -1,0 +1,14 @@
+<tr>
+    <td><%= print_model_set_position.id %></td>
+    <td><%= print_model_set_position.print_model.filename %></td>
+    <td><%= print_model_set_position.quantity %></td>
+    <td><%= print_model_set_position.default_infill %></td>
+    <td><%= print_model_set_position.default_fill_pattern %></td>
+    <td><%= print_model_set_position.priority %></td>
+    <td><%= link_to "edit", edit_print_model_set_position_path(print_model_set_position) %></td>
+    <td><%= link_to "delete", print_model_set_position, :confirm => 'Are you sure?', :method => :delete %></td>
+
+
+
+</tr>
+

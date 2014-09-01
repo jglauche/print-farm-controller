@@ -1,0 +1,37 @@
+<%= form_for(@print_model_set_position) do |f| %>
+  <% if @print_model_set_position.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@print_model_set_position.errors.count, "error") %> prohibited this print_model_set_position from being saved:</h2>
+
+      <ul>
+      <% @print_model_set_position.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :print_model_set_id %><br />
+    <%= f.text_field :print_model_set_id %>
+  </div>
+  <div class="field">
+    <%= f.label :print_model_id %><br />
+    <%= f.text_field :print_model_id %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :default_infill %><br />
+    <%= f.text_field :default_infill %>
+  </div>
+  <div class="field">
+    <%= f.label :default_fill_pattern %><br />
+    <%= f.text_field :default_fill_pattern %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

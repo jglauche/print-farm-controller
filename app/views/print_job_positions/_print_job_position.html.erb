@@ -1,0 +1,11 @@
+<tr>
+	<td><%= print_job_position.id %></td>
+	<td><%= print_status(print_job_position.status) %></td>
+	<td><%= print_job_position.machine.nick %></td>
+	<td><%= print_job_position.print_job.print_model.filename %></td>
+	<td><%= print_job_position.quantity %></td>
+	<td><%= print_job_position.percent_done.to_f %>%</td>
+	
+	<td><%= link_to "Maschine fertig", edit_print_job_position_path(print_job_position) if print_job_position.status == PrintJobPosition::Done  %></td>
+	
+</tr>

@@ -1,0 +1,24 @@
+<h1>Listing archives</h1>
+
+<table>
+  <tr>
+  	<th>Name</th>
+    <th>Debitor</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @archives.each do |archive| %>
+  <tr>
+	<td><%= archive.name %></td>
+    <td><%= archive.debitor %></td>
+    <td><%= link_to 'Show', archive %></td>
+    <td><%= link_to 'Edit', edit_archive_path(archive) %></td>
+    <td><%= link_to 'Destroy', archive, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Archive', new_archive_path %>

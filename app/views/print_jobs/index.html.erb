@@ -1,0 +1,22 @@
+<h1>Listing print_jobs</h1>
+
+<table>
+  <tr>
+    <th>Print model</th>
+    <th>Quantity<br/>Done/Total</th>
+    <th>Printing</th>
+    <th>Failed</th>
+    <th>Material</th>
+    <th>Priority</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%= render @print_jobs %>
+</table>
+
+<br />
+
+<%= link_to 'New Print job', new_print_job_path %>

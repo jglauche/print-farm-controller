@@ -1,0 +1,31 @@
+<h1>Listing print_job_batches</h1>
+
+<table>
+  <tr>
+    <th>Print model set</th>
+    <th>Print material</th>
+    <th>Machine</th>
+    <th>Container</th>
+    <th>Priority</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @print_job_batches.each do |print_job_batch| %>
+  <tr>
+    <td><%= print_job_batch.print_model_set.try(:name) %></td>
+    <td><%= print_job_batch.material_id %></td>
+    <td><%= print_job_batch.machine_id %></td>
+    <td><%= print_job_batch.container_id %></td>
+    <td><%= print_job_batch.priority %></td>
+    <td><%= link_to 'Show', print_job_batch %></td>
+    <td><%= link_to 'Edit', edit_print_job_batch_path(print_job_batch) %></td>
+    <td><%= link_to 'Destroy', print_job_batch, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Print job batch', new_print_job_batch_path %>

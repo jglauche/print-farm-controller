@@ -1,0 +1,57 @@
+<%= form_for(@machine) do |f| %>
+  <% if @machine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@machine.errors.count, "error") %> prohibited this machine from being saved:</h2>
+
+      <ul>
+      <% @machine.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.select :status, Machine.status_select %>
+  </div>
+  <div class="field">
+    <%= f.label :nick %><br />
+    <%= f.text_field :nick %>
+  </div>
+  <div class="field">
+    <%= f.label :uri %><br />
+    <%= f.text_field :uri %>
+  </div>
+  <div class="field">
+    <%= f.label :api_key %><br />
+    <%= f.text_field :api_key %>
+  </div>
+  <div class="field">
+    <%= f.label :print_material_id %><br />
+    <%= f.select :print_material_id, PrintMaterial.all.map{|l| [l.id, l.id]} %>
+  </div>
+  <div class="field">
+    <%= f.label :config_file %><br />
+    <%= f.text_field :config_file %>
+  </div>
+  <div class="field">
+    <%= f.label :nozzle_size %><br />
+    <%= f.text_field :nozzle_size %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :build_size_x %><br />
+    <%= f.text_field :build_size_x %>
+  </div>
+  <div class="field">
+    <%= f.label :build_size_y %><br />
+    <%= f.text_field :build_size_y %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

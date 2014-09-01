@@ -1,0 +1,12 @@
+<h1>Listing print_models</h1>
+
+<table>
+
+<%= render(:partial => "print_models/table_head") %>
+<%= render(@print_models) %>
+
+</table>
+
+<br />
+
+<%= link_to 'New Print model', new_print_model_path %>

@@ -1,0 +1,61 @@
+<%= form_for(@print_model) do |f| %>
+  <% if @print_model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@print_model.errors.count, "error") %> prohibited this print_model from being saved:</h2>
+
+      <ul>
+      <% @print_model.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :archive_id %><br />
+    <%= f.text_field :archive_id %>
+  </div>
+  <div class="field">
+    <%= f.label :filename %><br />
+    <%= f.text_field :filename %>
+  </div>
+  <div class="field">
+    <%= f.label :md5sum %><br />
+    <%= f.text_field :md5sum %>
+  </div>
+  <div class="field">
+    <%= f.label :max_x %><br />
+    <%= f.text_field :max_x %>
+  </div>
+  <div class="field">
+    <%= f.label :max_y %><br />
+    <%= f.text_field :max_y %>
+  </div>
+  <div class="field">
+    <%= f.label :default_infill %><br />
+    <%= f.text_field :default_infill %>
+  </div>
+  <div class="field">
+    <%= f.label :fill_pattern %><br />
+    <%= f.select :fill_pattern, fill_patterns %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br />
+    <%= f.text_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :print_minimum %><br />
+    <%= f.text_field :print_minimum %>
+  </div>
+  <div class="field">
+    <%= f.label :print_maximum %><br />
+    <%= f.text_field :print_maximum %>
+  </div>
+  <div class="field">
+    <%= f.label :print_more_than_needed_if_possible %><br />
+    <%= f.text_field :print_more_than_needed_if_possible %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

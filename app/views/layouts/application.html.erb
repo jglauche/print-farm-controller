@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print Farm Manager</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	
+<div id="menu">
+	<p><%= link_to "Aktive Jobs", print_job_positions_path %></p>
+	<p><%= link_to "Jobs", print_job_batches_path %></p>
+	
+	<p><%= link_to "Behälter", containers_path %></p>
+	
+	<p><%= link_to "Sets", print_model_sets_path %></p>
+
+	<p><%= link_to "Dateien", print_models_path %></p>
+
+	<p><%= link_to "Spulen", print_materials_path %></p>
+	
+	<p><%= link_to "Drucker", machines_path %></p>
+	<p><%= link_to "Material/Farbe", materials_path %></p>
+
+	<p><%= link_to "Archive", archives_path %></p>
+	<p><%= link_to "Backends", backends_path %></p>
+
+</div>
+<div id="main">
+<%= yield %>
+</div>
+</body>
+</html>

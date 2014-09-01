@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <tr>
+    <th>Print model</th>
+    <th>Quantity<br/>Done/Total</th>
+    <th>Printing</th>
+    <th>Failed</th>
+    <th>Material</th>
+    <th>Priority</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%= render @print_jobs unless @print_jobs == nil %>
+</table>
+
+
+<%= link_to 'Edit', edit_print_job_batch_path(@print_job_batch) %> |
+<%= link_to 'Back', print_job_batches_path %>

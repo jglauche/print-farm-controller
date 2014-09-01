@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @backend.name %>
+</p>
+
+<p>
+  <b>Directory:</b>
+  <%= @backend.directory %>
+</p>
+
+
+<%= link_to 'Edit', edit_backend_path(@backend) %> |
+<%= link_to 'Back', backends_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Print model set:</b>
+  <%= @print_model_set_position.print_model_set_id %>
+</p>
+
+<p>
+  <b>Print model:</b>
+  <%= @print_model_set_position.print_model_id %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @print_model_set_position.quantity %>
+</p>
+
+<p>
+  <b>Default infill:</b>
+  <%= @print_model_set_position.default_infill %>
+</p>
+
+<p>
+  <b>Default fill pattern:</b>
+  <%= @print_model_set_position.default_fill_pattern %>
+</p>
+
+
+<%= link_to 'Edit', edit_print_model_set_position_path(@print_model_set_position) %> |
+<%= link_to 'Back', print_model_set_positions_path %>

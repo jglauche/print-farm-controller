@@ -1,0 +1,59 @@
+<%= form_for(@print_job) do |f| %>
+  <% if @print_job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@print_job.errors.count, "error") %> prohibited this print_job from being saved:</h2>
+
+      <ul>
+      <% @print_job.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+
+    <%= f.hidden_field :print_model_id %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :plastic_type %><br />
+    <%= f.select :plastic_type, Material.plastic_type_available.map{|l| [l, l]},:include_blank => true %>
+  </div>
+  <div class="field">
+    oder Farbe<br />
+    <%= f.select :material_id, Material.available.map{|l| [l.name, l.id]},:include_blank => true %>
+  </div>
+
+  <% if Backend.active.size > 1 %>
+  <div class="field">
+    <%= f.label :backend_id %><br />
+    <%= f.select :backend_id, Backend.active.map{|l| [l.name, l.id]} %>
+  </div>
+	<% else %>
+		<%= f.hidden_field :backend_id, :value => Backend.active.first.id %>
+	<% end %>
+  <div class="field">
+    <%= f.label :container_id %><br />
+    <%= f.select :container_id, Container.all.map{|l| [[l.id, l.description].join(" "), l.id]},:include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br />
+    <%= f.text_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :machine_id %><br />
+    <%= f.select :machine_id, Machine.operational.map{|l| [l.nick, l.id]},:include_blank => true  %>
+  </div>
+
+
+  <div class="field">
+    <%= f.hidden_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

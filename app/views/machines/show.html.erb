@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nick:</b>
+  <%= @machine.nick %>
+</p>
+
+<p>
+  <b>Uuid:</b>
+  <%= @machine.uuid %>
+</p>
+
+<p>
+  <b>Print material:</b>
+  <%= @machine.print_material_id %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @machine.place %>
+</p>
+
+
+<%= link_to 'Edit', edit_machine_path(@machine) %> |
+<%= link_to 'Back', machines_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@material) do |f| %>
+  <% if @material.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@material.errors.count, "error") %> prohibited this material from being saved:</h2>
+
+      <ul>
+      <% @material.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :plastic_type %><br />
+    <%= f.text_field :plastic_type %>
+  </div>
+  <div class="field">
+    <%= f.label :colour %><br />
+    <%= f.text_field :colour %>
+  </div>
+  <div class="field">
+    <%= f.label :weight_per_mm %>^3<br />
+    <%= f.text_field :weight_per_mm %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

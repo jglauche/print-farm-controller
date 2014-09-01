@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Print model:</b>
+  <%= @print_job.print_model.filename %>
+</p>
+
+<p>
+	<b>Individual Jobs:</b>	
+</p>
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Status</th>
+		<th>Machine</th>
+		<th>Quantity</th>
+		<th></th>
+	</tr>
+<%= render(@print_job.print_job_positions) %>
+</table>

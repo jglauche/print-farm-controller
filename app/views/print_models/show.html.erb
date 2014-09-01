@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Filename:</b>
+  <%= @print_model.filename %>
+</p>
+
+<p>
+  <b>Md5sum:</b>
+  <%= @print_model.md5sum %>
+</p>
+
+<p>
+  <b>Max x:</b>
+  <%= @print_model.max_x %>
+</p>
+
+<p>
+  <b>Max y:</b>
+  <%= @print_model.max_y %>
+</p>
+
+<p>
+  <b>Default infill:</b>
+  <%= @print_model.default_infill %>
+</p>
+
+<p>
+  <b>Default layer height:</b>
+  <%= @print_model.default_layer_height %>
+</p>
+
+<p>
+  <b>Weight:</b>
+  <%= @print_model.weight %>
+</p>
+
+<p>
+  <b>Printing time:</b>
+  <%= @print_model.printing_time %>
+</p>
+
+<p>
+  <b>Print more than needed if possible:</b>
+  <%= @print_model.print_more_than_needed_if_possible %>
+</p>
+
+
+<%= link_to 'Edit', edit_print_model_path(@print_model) %> |
+<%= link_to 'Back', print_models_path %>

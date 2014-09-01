@@ -1,0 +1,16 @@
+  <tr>
+  	<td><%= print_model.try(:archive).try(:name) %></td>
+    <td><%= print_model.filename %></td>
+    <td><%= print_model.max_x %></td>
+    <td><%= print_model.max_y %></td>
+    <td><%= print_model.default_infill %></td>
+    <td><%= print_model.fill_pattern %></td>
+    <td><%= print_model.weight %></td>
+    <td><%= print_model.printing_time %></td>
+    <td><%= print_model.print_more_than_needed_if_possible %></td>
+    <td><%= link_to 'Print!', new_print_job_path(:print_model_id => print_model.id) %></td>
+    <td><%= link_to 'Edit', edit_print_model_path(print_model) %></td>
+    <td><%= link_to '->Set', new_link_print_model_set_position_path(print_model) %></td>
+    <td><%= link_to 'Destroy', print_model, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+  

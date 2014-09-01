@@ -1,0 +1,53 @@
+<h1>Listing print_materials</h1>
+
+<div>
+    <h3>Neue Standard-Spule:</h3>
+    <%= form_for(PrintMaterial.new(:current_diameter => 2.85)) do |f| %>
+      <div class="field">
+        <%= f.label :material_id %>
+        <%= f.select :material_id, Material.all.map{|l| [l.name, l.id]} %>
+
+        <%= f.label :filament_weight %>
+        <%= f.select :filament_weight, ["2.3", "10", "1.0"] %> kg
+        <%= f.label :current_diameter %>    
+        <%= f.text_field :current_diameter, :size => "5" %>mm
+        <%= f.submit %>
+      </div>
+    <% end %>
+
+    
+    
+</div>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Material</th>
+    <th>Nettogewicht</th>
+    <th>Noch vorhanden</th>
+	<th>Auf Maschine</th>
+	<th><%=label :print_material, :current_diameter %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+
+  </tr>
+
+<% @print_materials.each do |print_material| %>
+  <tr>
+    <td><%= print_material.id %></td>
+    <td><%= print_material.material.name %></td>
+    <td><%= print_material.filament_weight %></td>
+    <td><%= print_material.filament_left %></td>
+	<td><%= print_material.machine.try(:nick) %></td>
+	<td><%= print_material.current_diameter %></td>
+    <td><%= link_to 'Show', print_material %></td>
+    <td><%= link_to 'Edit', edit_print_material_path(print_material) %></td>
+    <td><%= link_to 'Destroy', print_material, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Print material', new_print_material_path %>

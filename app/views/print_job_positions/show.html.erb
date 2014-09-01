@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Print job:</b>
+  <%= @print_job_position.print_job_id %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @print_job_position.status %>
+</p>
+
+<p>
+  <b>Machine:</b>
+  <%= @print_job_position.machine_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_print_job_position_path(@print_job_position) %> |
+<%= link_to 'Back', print_job_positions_path %>

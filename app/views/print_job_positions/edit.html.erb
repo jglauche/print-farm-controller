@@ -1,0 +1,25 @@
+<h1></h1>
+<%= form_for(@print_job_position) do |f| %>
+    <div>
+    <h2>
+        Wenn OK, in Container Nr.
+        
+        <big>
+            <b><%= @print_job_position.print_job.print_job_batch.container_id %> </b>
+        </big> 
+        legen!
+    </h2>
+    </div>
+
+
+    <div>
+    <%= f.hidden_field :print_job_id %>
+	Menge OK: <%= f.text_field :quantity %>
+    </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+<% end %>
+<%= link_to 'Show', @print_job_position %> |
+<%= link_to 'Back', print_job_positions_path %>
